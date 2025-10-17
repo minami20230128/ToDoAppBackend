@@ -1,5 +1,6 @@
 package com.example.todo.repository
 
+import com.example.todo.entity.Status
 import com.example.todo.entity.Task
 import com.example.todo.mapper.TaskMapper
 import org.springframework.stereotype.Repository
@@ -13,19 +14,24 @@ class TaskRepository(
         return taskMapper.findAll()
     }
 
-    fun insertTask(task: Task): Long {
-        return taskMapper.insertTask()
+    fun findTaskById(id: Long): Task {
+        return taskMapper.findTaskById(id)
     }
 
-    fun updateTaskStatus(id: Int, task: Task): Long {
-        return taskMapper.updateTaskStatus(id, task)
+    fun insertTask(task: Task): Task {
+        taskMapper.insertTask(task);
+        return task;
     }
 
-    fun updateTask(id: Int, task: Task): Long {
+    fun updateTaskStatus(id: Long, status: Status): Int {
+        return taskMapper.updateTaskStatus(id, status.code)
+    }
+
+    fun updateTask(id: Long, task: Task): Int {
         return taskMapper.updateTask(id, task)
     }
 
-    fun deleteTask(id: Long): Long {
+    fun deleteTask(id: Long): Int {
         return taskMapper.deleteTask(id)
     }
 }

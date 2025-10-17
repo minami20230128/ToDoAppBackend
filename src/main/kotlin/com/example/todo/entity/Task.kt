@@ -8,7 +8,7 @@ data class Task(
     val title: String,
     val startDate: LocalDate,
     val dueDate: LocalDate,
-    val condition: String,
+    val taskCondition: String,
     val memo: String,
     val status: Int,
     val createdAt: LocalDateTime? = null,

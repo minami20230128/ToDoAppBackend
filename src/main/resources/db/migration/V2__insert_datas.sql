@@ -1,4 +1,4 @@
-INSERT INTO task (title, start_date, due_date, `condition`, memo, status)
+INSERT INTO task (title, start_date, due_date, task_condition, memo, status)
 VALUES
   ('資料作成', '2025-07-01', '2025-07-03', '資料ドラフト作成中', 'パワポで資料を作成中', 1),
   ('会議準備', '2025-07-02', '2025-07-05', '関連資料収集中', '必要な資料をまとめる', 0),
