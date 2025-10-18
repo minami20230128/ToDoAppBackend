@@ -14,7 +14,7 @@ class TaskRepository(
         return taskMapper.findAll()
     }
 
-    fun findTaskById(id: Long): Task {
+    fun findTaskById(id: Long): Task? {
         return taskMapper.findTaskById(id)
     }
 

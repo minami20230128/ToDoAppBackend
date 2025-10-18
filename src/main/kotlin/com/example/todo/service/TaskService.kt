@@ -15,7 +15,7 @@ class TaskService(
         return taskRepository.findAllTasks();
     }
 
-    fun findById(id: Long): Task {
+    fun findById(id: Long): Task? {
         return taskRepository.findTaskById(id)
     }
 
